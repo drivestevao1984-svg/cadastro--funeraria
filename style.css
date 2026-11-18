@@ -1,0 +1,240 @@
+:root {
+    --cor-creme: #F5F0E6;        /* 60% - Cor dominante */
+    --cor-ocre: #CC8E35;         /* 30% - Cor secundária */
+    --cor-ocre-escuro: #A87224;  /* Variação para hover */
+    --cor-branco: #FFFFFF;       /* 10% - Cor de destaque/contraste */
+    --cor-texto: #3D352E;        /* Marrom muito escuro para leitura confortável */
+    --cor-borda: #DCD3C1;
+}
+
+** {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #F5F0E6; /* 60% Creme */
+    color: #3D352E;            /* Texto escuro */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho - Parte dos 30% Amarelo Ocre */
+.cabecalho {
+    background-color: var(--cor-ocre);
+    color: var(--cor-branco);
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container-logo {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-svg {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.identidade-texto h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.identidade-texto .segmento {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    display: block;
+}
+
+/* Área Principal */
+.container-principal {
+    flex: 1;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Cartão do Formulário - Parte dos 10% Branco */
+.card-formulario {
+    background-color: var(--cor-branco);
+    width: 100%;
+    max-width: 750px;
+    padding: 2.5rem;
+    border-radius: 10px;
+    border-top: 6px solid var(--cor-ocre);
+    box-shadow: 0 4px 15px rgba(61, 53, 46, 0.08);
+}
+
+.card-formulario h2 {
+    color: var(--cor-ocre);
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.subtitulo {
+    font-size: 0.95rem;
+    color: #6E655C;
+    margin-bottom: 1.8rem;
+}
+
+/* Grupos e Campos */
+.grupo-campos {
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.grupo-campos legend {
+    color: var(--cor-ocre);
+    font-weight: 600;
+    padding: 0 0.5rem;
+    font-size: 1.05rem;
+}
+
+.campo {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo:last-child {
+    margin-bottom: 0;
+}
+
+.linha-dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    padding: 0.75rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--cor-branco);
+    color: var(--cor-texto);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cor-ocre);
+    box-shadow: 0 0 0 3px rgba(204, 142, 53, 0.2);
+}
+
+/* Opções de Turno (Radio Buttons) */
+.opcoes-turno {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    accent-color: var(--cor-ocre);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Botão - Parte dos 30% Amarelo Ocre */
+.btn-cadastrar {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--cor-ocre);
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cadastrar:hover {
+    background-color: var(--cor-ocre-escuro);
+}
+
+/* Feedback de Cadastro */
+.feedback {
+    margin-top: 1.5rem;
+    padding: 1.2rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.feedback.sucesso {
+    background-color: var(--cor-creme);
+    border-left: 5px solid var(--cor-ocre);
+    color: var(--cor-texto);
+}
+
+.feedback.erro {
+    background-color: #FDECEA;
+    border-left: 5px solid #a0322a;
+    color: #A50E0E;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Rodapé - Parte dos 30% Amarelo Ocre */
+.rodape {
+    background-color: var(--cor-ocre);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .linha-dupla {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .card-formulario {
+        padding: 1.5rem;
+    }
+
+    .container-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+}
